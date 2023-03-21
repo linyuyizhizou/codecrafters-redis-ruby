@@ -14,6 +14,7 @@ class YourRedisServer
     # client = server.accept
     server =TCPServer.new(@port)
     client=server.accept
+    client.write"+Pong\r\n"
   end
 end
 
