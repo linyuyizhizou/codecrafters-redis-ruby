@@ -17,6 +17,7 @@ class YourRedisServer
     # client.write"+PONG\r\n"
     while !client.eof?
       x = client.readpartial 1024
+      client.write"+PONG\r\n"
     end
     client.close
   end
